@@ -3,27 +3,77 @@ import DesktopServicesMenu from "./components/DesktopServicesMenu";
 import Link from "next/link";
 import MobileMenu from "./components/MobileMenu";
 import CookieBanner from "./components/CookieBanner";
+import ExitIntentPopup from "./components/ExitIntentPopup";
+import MobileStickyCTA from "./components/MobileStickyCTA";
+
+
+
+
+
 
 
 export const metadata = {
   title: "Premium Remote Tech Support USA, UK & Canada | TechSupport4",
   description:
     "Certified remote technical support for Internet, Printer, Wi-Fi Router & Smart TV issues across USA, UK & Canada.",
+   metadataBase: new URL("https://techsupport4.com"),
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+  openGraph: {
+    title: "Remote Tech Support USA, UK & Canada",
+    description:
+      "Secure & certified remote technical support services.",
+    url: "https://techsupport4.com",
+    siteName: "TechSupport4",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Remote Tech Support USA, UK & Canada",
+    description:
+      "Certified remote support for Internet, Printer, Router & Smart TV.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
 
         {/* ================= NAVBAR ================= */}
-        <header className="
-          sticky top-0 z-50
-          backdrop-blur-xl
-          bg-white/70
-          border-b border-slate-200
-          shadow-sm
+    <header className="
+  sticky top-0 z-50
+  backdrop-blur-xl
+  bg-white/70 dark:bg-slate-900/80
+  border-b border-slate-200 dark:border-slate-700
+  shadow-sm
 ">
+
+ 
+
 
           <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
 
@@ -69,11 +119,15 @@ export default function RootLayout({ children }) {
 
 
 
-            <nav className="hidden md:flex gap-8 font-medium text-slate-700 items-center">
+           <nav className="hidden md:flex gap-8 font-medium text-slate-700 dark:text-slate-200 items-center">
+
+
               <a href="/" className="hover:text-blue-600">Home</a>
               <DesktopServicesMenu />
               <a href="#reviews" className="hover:text-blue-600">Reviews</a>
               <a href="/contact" className="hover:text-blue-600">Contact</a>
+             
+
             </nav>
 
             <MobileMenu />
@@ -82,9 +136,13 @@ export default function RootLayout({ children }) {
 
         {/* ================= PAGE CONTENT ================= */}
         <main>{children}</main>
+        
 
         {/* ================= FOOTER ================= */}
-        <footer className="bg-slate-900 text-slate-300 py-12">
+        <footer className="bg-slate-900 dark:bg-black text-slate-300 py-12">
+
+
+
           <div className="max-w-7xl mx-auto px-6 text-center">
 
             
@@ -134,6 +192,13 @@ export default function RootLayout({ children }) {
           </div>
         </footer>
         <CookieBanner />
+        
+        {/* Conversion Systems */}
+        <MobileStickyCTA />
+        <ExitIntentPopup />
+        
+
+
       </body>
     </html>
   );

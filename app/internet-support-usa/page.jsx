@@ -1,12 +1,78 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "Internet Support USA | Remote Internet Fix",
   description:
     "Professional remote internet support for USA customers. Fix slow internet, no connection, DNS and Wi-Fi issues securely.",
+     keywords: [
+    "Internet not working USA",
+    "Fix internet issues remotely",
+    "Router troubleshooting USA",
+    "WiFi not connecting fix"
+  ],
+  alternates: {
+    canonical: "https://techsupport4.com/internet-support-usa"
+  }
+
 };
 
 export default function InternetSupportUSA() {
   return (
     <main className="bg-slate-50 text-slate-800">
+
+      <Script
+  id="breadcrumb-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://techsupport4.com"
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Internet Support USA",
+          item: "https://techsupport4.com/internet-support-usa"
+        }
+      ]
+    })
+  }}
+/>
+<Script
+  id="service-faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Why is my internet not working?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Internet issues may be caused by router errors, ISP outages or DNS problems."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Can internet problems be fixed remotely?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, most internet issues can be diagnosed and resolved remotely."
+          }
+        }
+      ]
+    })
+  }}
+/>
+
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white">

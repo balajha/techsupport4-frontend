@@ -1,11 +1,82 @@
+import Script from "next/script";
 export const metadata = {
   title: "Printer Support USA | Remote Printer Help",
   description:
     "Remote printer support for USA customers. Fix printer offline, driver errors, Wi-Fi printer issues securely.",
+alternates: {
+    canonical: "https://techsupport4.com/printer-support-usa",
+  },
+  openGraph: {
+    title: "Printer Support USA | TechSupport4",
+    description:
+      "Remote printer troubleshooting & setup support across USA, UK & Canada.",
+    url: "https://techsupport4.com/printer-support-usa",
+    type: "website",
+  },
+  twitter: {
+  card: "summary_large_image",
+  title: "Printer Support USA | TechSupport4",
+  description: "Remote printer troubleshooting & setup support across USA, UK & Canada.",
+},
+
 };
+
 
 export default function PrinterSupportUSA() {
   return (
+    
+    <>
+    {/* ✅ SERVICE SCHEMA */}
+      <Script
+        id="printer-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Remote Printer Support",
+            provider: {
+              "@type": "Organization",
+              name: "TechSupport4",
+              url: "https://techsupport4.com",
+            },
+            areaServed: ["United States", "United Kingdom", "Canada"],
+            description:
+              "Remote troubleshooting for printer offline, driver errors, setup & network issues.",
+          }),
+        }}
+      />
+
+      {/* ✅ FAQ SCHEMA */}
+      <Script
+        id="printer-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Why is my printer offline?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Printer offline errors occur due to network or driver issues. Our remote experts fix it instantly.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you support wireless printer setup?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide complete Wi-Fi printer setup and troubleshooting remotely.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+    
     <main className="bg-slate-50 text-slate-800">
 
       {/* HERO */}
@@ -26,6 +97,7 @@ export default function PrinterSupportUSA() {
             alt="Printer Support USA"
             className="rounded-xl shadow-lg"
           />
+         
         </div>
       </section>
 
@@ -79,6 +151,7 @@ export default function PrinterSupportUSA() {
       </section>
 
     </main>
+    </>
   );
 }
 

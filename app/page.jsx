@@ -200,39 +200,35 @@ export default function Home() {
           </div>
         </section>
 
-  <section className="py-8 text-center bg-white">
-  <p className="text-sm text-slate-600">
+ <section className="py-8 text-center bg-white dark:bg-slate-800">
+  <p className="text-sm text-slate-600 dark:text-slate-300">
     Serving customers across major cities including{" "}
     <a
-      href="/internet-support-new-york"
-      className="text-blue-600 underline"
+      href="/location/internet-support-new-york"
+      className="text-blue-600 underline hover:text-blue-800 font-semibold"
     >
       New York
     </a>,{" "}
     <a
-      href="/internet-support-california"
-      className="text-blue-600 underline"
+      href="/location/internet-support-california"
+      className="text-blue-600 underline hover:text-blue-800 font-semibold"
     >
       California
     </a>,{" "}
     <a
-      href="/printer-support-london"
-      className="text-blue-600 underline"
+      href="/location/printer-support-london"
+      className="text-blue-600 underline hover:text-blue-800 font-semibold"
     >
       London
     </a>,{" "}
     <a
-      href="/wifi-support-toronto"
-      className="text-blue-600 underline"
+      href="/location/wifi-support-toronto"
+      className="text-blue-600 underline hover:text-blue-800 font-semibold"
     >
       Toronto
     </a>.
-
-   
   </p>
-  
 </section>
-
 
 
 

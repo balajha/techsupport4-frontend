@@ -1,7 +1,31 @@
 export default function sitemap() {
-  return [
-    { url: "https://techsupport4.com", lastModified: new Date() },
-    { url: "https://techsupport4.com/internet-support-usa", lastModified: new Date() },
-    { url: "https://techsupport4.com/printer-support-usa", lastModified: new Date() },
+  const baseUrl = "https://techsupport4.com";
+
+  const staticPages = [
+    "",
+    "/contact",
+    "/internet-support-usa",
+    "/printer-support-usa",
+    "/wifi-router-support-usa",
+    "/smart-tv-support-usa",
   ];
+
+  const cities = [
+    "internet-support-new-york",
+    "internet-support-california",
+    "printer-support-london",
+    "wifi-support-toronto",
+  ];
+
+  const staticUrls = staticPages.map((page) => ({
+    url: `${baseUrl}${page}`,
+    lastModified: new Date(),
+  }));
+
+  const cityUrls = cities.map((slug) => ({
+    url: `${baseUrl}/location/${slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticUrls, ...cityUrls];
 }

@@ -2,8 +2,9 @@ import "./globals.css";
 import MobileMenu from "./components/MobileMenu";
 
 export const metadata = {
-  title: "TechSupport4",
-  description: "Remote Tech Support USA",
+  title: "Premium Remote Tech Support USA, UK & Canada | TechSupport4",
+  description:
+    "Certified remote technical support for Internet, Printer, Wi-Fi Router & Smart TV issues across USA, UK & Canada.",
 };
 
 export default function RootLayout({ children }) {
